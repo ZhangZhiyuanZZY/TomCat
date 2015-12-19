@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="knockout_00" translatesAutoresizingMaskIntoConstraints="NO" id="RS8-Lp-abh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="测试" translatesAutoresizingMaskIntoConstraints="NO" id="RS8-Lp-abh">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdf-sx-oPZ" userLabel="header">
@@ -54,6 +54,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="knockout_00" width="640" height="1024"/>
+        <image name="测试" width="640" height="1024"/>
     </resources>
 </document>

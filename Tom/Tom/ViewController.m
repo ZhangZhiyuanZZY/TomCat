@@ -23,22 +23,29 @@
 }
 
 - (IBAction)clickHeaderBtn:(id)sender {
-    [self setupImage:@"knockout_" count:81];
+    [self setupImage:@"knockout" count:81];
 }
 - (IBAction)clickStomachBtn:(id)sender {
-    [self setupImage:@"stomach_" count:34];
+    [self setupImage:@"stomach" count:34];
 }
 
 //设置图片动画
 - (void)setupImage:(NSString *)imageName count:(int)imageCount
 {
+    //图片正在播放, 返回
+    if (self.tomCatImgview.isAnimating) {
+        return;
+    }
+    
     //数组
     NSMutableArray *array = [NSMutableArray array];
     
     //循环遍历设置图片放入数组
     for (int i = 0; i < imageCount ; i++ ) {
-        NSString *imageString = [NSString stringWithFormat:@"%@%02d", imageName, i];
-        UIImage *image = [UIImage imageNamed:imageString];
+        NSString *imageString = [NSString stringWithFormat:@"%@_%02d", imageName, i];
+        //加载对应图片
+        NSString *path = [[NSBundle mainBundle] pathForResource:imageString ofType:@"jpg"];
+        UIImage *image = [UIImage imageWithContentsOfFile:path];
         [array addObject:image];
     }
     //设置动画
@@ -46,6 +53,9 @@
     self.tomCatImgview.animationDuration = imageCount / 12;
     self.tomCatImgview.animationRepeatCount = 1;
     [self.tomCatImgview startAnimating];
+    
+    
+    [self.tomCatImgview performSelector:@selector(setAnimationImages:) withObject:nil afterDelay:self.tomCatImgview.animationDuration + 0.01];
 }
 
 @end
