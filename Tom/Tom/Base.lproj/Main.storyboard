@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="knockout_00" translatesAutoresizingMaskIntoConstraints="NO" id="RS8-Lp-abh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdf-sx-oPZ" userLabel="header">
+                                <rect key="frame" x="65" y="114" width="191" height="154"/>
+                                <connections>
+                                    <action selector="clickHeaderBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TWT-ZV-Qxp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7q-xT-bbf" userLabel="stomach">
+                                <rect key="frame" x="120" y="412" width="80" height="57"/>
+                                <connections>
+                                    <action selector="clickStomachBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GEv-1W-ua9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RS8-Lp-abh" secondAttribute="trailing" id="646-fN-erv"/>
+                            <constraint firstItem="RS8-Lp-abh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UpC-NT-6Im"/>
+                            <constraint firstItem="RS8-Lp-abh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fIu-an-CNu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RS8-Lp-abh" secondAttribute="bottom" id="nY2-EJ-k55"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="headerBtn" destination="wdf-sx-oPZ" id="5Iz-BC-Nfl"/>
+                        <outlet property="stomach" destination="c7q-xT-bbf" id="Izj-s7-OWr"/>
+                        <outlet property="tomCatImgview" destination="RS8-Lp-abh" id="42Z-0E-4Nd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="284" y="226"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="knockout_00" width="640" height="1024"/>
+    </resources>
+</document>
